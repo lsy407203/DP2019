@@ -1,0 +1,17 @@
+   
+   .navi{list-style-type:none; margin-left:1103px; padding:0;}
+            .navi a {display: block; color: #000; padding: 8px 16px; text-decoration: none; }
+            .navi a:hover {background:darkslateblue; color:#fff; }
+            li{width:100px; float:left; background:lavender}
+
+            <ul class="navi">
+
+                    <li><a href="https://movie.naver.com/movie/bi/mi/basic.nhn?code=158626">페이지</a></li>
+                   
+                    <li><a href="http://preview-intlportal2-kr.foxfilm.com/shape">공식</a></li>
+                   
+                    <li><a href="https://www.youtube.com/watch?v=XB8HgiB5Ehk">예고편</a></li>
+                   
+                    <li><a href="https://music.bugs.co.kr/album/709412?wl_ref=list_ab_03">음악</a></li>
+                   
+            </ul>

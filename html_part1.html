@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html>
+
     <head>
+            
+                <style type="text/css" media="screen, print"> @font-face {
+                    font-family: 'Noto Sans KR', sans-serif;
+                    src: url("https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap");
+                  }
+                  body { font-family: "Noto Sans KR", sans-serif }
+
+                  
+                </style> 
+                <div id="section1">   
             <audio controls autoplay>
                     <source src="media/The Shape Of Water.mp3" type="audio/mpeg"/>
                 </audio>
@@ -11,26 +22,44 @@
         <meta name="keywords" content="오늘의 영화" />
 
     </head>
-    <body>
+    <body> 
+           
+
+            
+
+            <span style="color:black;">
         
-        
+
         <style>
+
             body{
                 text-align: center;
-            }
+           }
              
-            #section1{background-color:darkslateblue;}
+            #section1{background-color:lavender;} 
             #section2{background-color:lavender;}
             #section3{background-color:black;}
-            h1{display:inline;}
-            h2{display:inline;}
+            ul{
+                list-style: none;
+            }
+             
         </style>
-        <div id="section1">
+            <div class="nav">
+                <ul>
+                    <li><a href="https://movie.naver.com/movie/bi/mi/basic.nhn?code=158626">영화페이지</a></li>                                         
+                    <li><a href="#section3">등장인물</a></li>
+                    <li><a href="#section2">예매하기</a></li>                        
+                </ul>
+            </div>
             <!-- h1~h6 제목. 순번x, 깊이(depth)o -->
-            <b>오늘의 영화는</b>
-            <h1>𓍯셰이프 오브 워터: 사랑의 모양 (The Shape Of Water)𓍯</h1> 
-            <b>입니다</b>
-            <br />
+            
+            <details open>
+                    <summary><b>오늘의 영화는 바로</b></summary>
+                    <img src="shape of water gif.gif" />
+                    <p><h1>𓆛 셰이프 오브 워터: 사랑의 모양 (The Shape Of Water) 𓆛 </h1> <b>입니다.</b></p>
+                    </details>
+
+                 <br />
             <h2>
                 모든 것을 초월한 단 하나의 사랑 <br/>“그를 사랑하는 나도 괴물인가요?”
             </h2>
@@ -38,12 +67,13 @@
         
              <br />
              <!-- anchor 닻 -->
-             <a href="https://movie.naver.com/movie/bi/mi/basic.nhn?code=158626" target="_blank">영화 페이지 바로가기</a> <br/>
+             
              <!-- _self, _blank -->
 
               <!-- image 그림 -->
-            <img src="the shape of water.jpg" />
+            <img src="the shape of water 2.jpg" />
             <br />
+        
         </div>
             
             <!-- hr 가로줄 -->
@@ -65,9 +95,9 @@
                     <hr />
                 <style>
                    #section3{
-                       color: blanchedalmond
-                       
-                   }
+                       color: blanchedalmond }
+                    table{margin-left: auto ;margin-right: auto; text-align: center;}
+
                    
                 </style>
 
@@ -81,26 +111,82 @@
                        
             <u1>
                     
-                    <li><b>샐리 호킨스</b> - 엘라이자 에스포지토 역</li>
+                    <li><b>Sally Hawkins</b> - 엘라이자 에스포지토 역</li>
                      <!-- image 그림 -->          
-                    <img src="Sally Hawkins.jpg" />
-                    <li><b>더그 존스</b> - 괴생물체 역</li>
+                    <img src="Sally Hawkins png.png" />
+                    <li><b>Doug Jones</b> - 괴생물체 역</li>
                     <!-- image 그림 -->
-                    <img src="Doug Jones.jpg"/>
-                    <li><b>마이클 섀넌</b> - 리차드 스트릭랜드 역</li>
+                    <img src="Doug Jones png.png"/>
+                    <li><b>Michael Corbett Shannon</b> - 리차드 스트릭랜드 역</li>
                      <!-- image 그림 -->
-                    <img src="Michael Corbett Shannon.jpg" />
-                    <li><b>리차드 젠킨스</b> - 자일스 역</li> 
+                    <img src="Michael Corbett Shannon png.png" />
+                    <li><b>Richard Dale Jenkins</b> - 자일스 역</li> 
                     <!-- image 그림 -->
-                    <img src="Richard Dale Jenkins.jpg" />
-                    <li><b>옥타비아 스펜서</b> - 젤다 역</li>
+                    <img src="Richard Dale Jenkins png.png" />
+                    <li><b>Octavia Spencer</b> - 젤다 역</li>
                     <!-- image 그림 -->
-                    <img src="Octavia Spencer.jpg" />
-                    <li><b>마이클 스털버그</b> - 호프스테틀러 박사 역</li> 
+                    <img src="Octavia Spencer png.png" />
+                    <li><b>Michael Stuhlbarg</b> - 호프스테틀러 박사 역</li> 
                     <!-- image 그림 -->
-                    <img src="Michael Stuhlbarg.jpg" />
-                </div>
-                
+                    <img src="Michael Stuhlbarg png.png" />
+                    <br />
+                    <style>
+                        table, tr, td{
+                            border: solid 1px mediumorchid;
+                        }
+                        td{
+                            width: 100px;
+                        }
+                           
+                        caption{
+                            text-align:left;
+                        }
+                    </style>
+                   
+                <table>
+                        
+                   <p align="center"><b>♬♪  OST  ♬♪</b></p>
+                           
+                                  
+                    <tr>
+                    
+                            <td><b>The Shape Of Water</b></td>
+                            <td><b>You'll Never Know (feat. Renee Fleming)</b></td>
+                            <td><b>The Creature</b></td>
+                            <td><b>Elisa's Theme</b></td>
+                            <td><b>Fingers</b></td>
+                        </tr>
+                        <tr>
+                                <td><b>SElisa And Zelda</b></td>
+                                <td><b>Spy Meeting</b></td>
+                                <td><b>Five Stars General</b></td>
+                                <td><b>The Silence Of Love</b></td>
+                                <td><b>Babalu</b></td>
+                            </tr>
+                            <tr>
+                                    <td><b>Egg</b></td>
+                                    <td><b>That Isn't Good</b></td>
+                                    <td><b>Underwater Kiss</b></td>
+                                    <td><b>The Escape</b></td>
+                                    <td><b>Watching Ruth</b></td>
+                                </tr>
+                                <tr>
+                                        <td><b>Decency</b></td>
+                                        <td><b>He's Coming For You</b></td>
+                                        <td><b>Overflow Of Love</b></td>
+                                        <td><b>Travail</b></td>
+                                        <td><b>La Vie Naturelle</b></td>
+                                    </tr>
+                                    <tr>
+                                            <td><b>Reflux</b></td>
+                                            <td><b>Set It Up</b></td>
+                                            <td><b>Thunderbowl</b></td>
+                                            <td><b>Scrabbling</b></td>
+                                            <td><b>You`ll Never Know (Feat. Renée Fleming)</b></td>
+                                        </tr>
+                                 
+                 </table>
+                             
                      
                 </u1>
                 <hr />
@@ -108,10 +194,12 @@
                 <video controls>
                         <source src="media/THE SHAPE OF WATER.mp4" type="video/mp4"/>
                     </video>
-                    <br />
+
+                    <br />                  
                     <hr />
+                    </div>
                     <div id="section2">
-                    <b>(ᵔᴥᵔ) 재밌게 보셨나요? 설문조사 부탁드립니다 (๑′ᴗ‵๑) </b>
+                    <b>(ᵔᴥᵔ) 재밌게 보셨나요? 설문조사 부탁드립니다 (ᵔᴥᵔ) </b>
                     <br />
                     <b>♡나는 이 영화가♥</b>
                     <p>너무 기대된다</p>  <input type="checkbox" />
@@ -198,12 +286,23 @@
                             </select>
                             <input type="button" value="예매하기" onclick="alert('예매완료 되었습니다.')"> </input>
                 <br />
+                <br />
+                <h1><b>𓇼느낀점𓇼</b></h1>
+                <br />
+                <p>유니티 때 혼자 제작하기 어려운 점들이 많았어서 html도 두려움이 컸는데</p>
+                <p>이번 수업 덕분에 html에 쉽게 접근 할 수 있었고, </p>
+                <p>또 주제를 가지고 홈페이지를 <b>직접</b> 제작해볼 수 있어서 신기했습니다.</p>
+                <p>보기좋은 홈페이지를 만들고 싶었는데 프로그램 사용이 미숙하여 충분히</p>
+                <p>만들지 못한 게 가장 아쉽습니다.</p>
+                <p>다음 기말평가 때는 지금보다 더 발전된 모습으로 작업하겠습니다. 감사합니다.</p>
+                   
+                
                 
                 </div>
                             
                     <!-- anchor 닻 -->
                     <a href="index.html" target="_blank">돌아오기</a> </input>
-
-
+               </span>
+          
     </body>
 </html>
