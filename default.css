@@ -2,3 +2,26 @@
     color:red;
 }
 /* ID가 external_target이면 { 글씨색을 : 빨강으로 }
+
+<nav>
+                <h2 class="float_left">name</h2>
+                <ul class="float_right">
+                    <li><a href="#">music</a></li>
+                    <li><a href="#">deep</a></li>
+                    <li><a href="#">action</a></li>
+                    <li><a href="#">contact</a></li>
+                </ul>
+            </nav> /* 네비게이션 .. 혹시 몰라 박제 */ 
+
+            /* footer{
+                width: 900px;
+                float: left;
+                margin-top: 10px;
+                padding: 20px 0px;
+                background-color: gray; 
+                text-align:center;
+            } */ 
+
+            /* <li><img src="images3/movie_image1.jpg" 
+            onmouseover="this.src='images3/movie_image1-1.jpg'" 
+            onmouseout="this.src='images3/movie_image1.jpg'"></li> */

@@ -4,36 +4,57 @@
         <title>layout4</title>
         <meta charset="utf-8" />
         <style>
+            h1{
+                color: honeydew;
+            } 
             body{
-                background-color : black; 
+                background-color : #43484e;
+                margin:0px;
             }
-            header li{
-                float: left;
-                list-style: none;
-                padding: 0px 10px; /* 상하 좌우 , 옛날 명령 = 무시됨 */ 
-                padding: 0px 20px 0px 0px; 
-                /* 상 우 하 좌 (위부터 시계방향) */ 
+            header{
+            background-image: url("images3/ghm1.jpg");
+            background-size: 100% auto; /* 가로 세로 */ 
+            color: gainsboro;
+            padding: 80px 0px; /* 상하 좌우 */ 
+            height:150px;
+            }
+            header h1{
+                padding-left:30px;
+                margin-top:70px;
             }
             header ul{
-                padding: 0px; 
+                padding: 25px; 
             }
-            .clear { clear :both;
-            height:0; overflow:hidden; }
+            
+            .menu{
+                margin-top:150px;
+            }
+            .clear{ 
+            clear :both;
+            height:0; overflow:hidden;
+             }
+            .float_left { float:left; font-size: 25px;}
+            .float_right {float:right; font-size:10px; padding: 12px 60px 10px 9px;}
+            .float_right a{text-decoration: none; color: black;}
             .short_line{
                 border-bottom: solid 1px gray;
                 width: 35px; 
                 margin: 10px 0px; /* 상하 좌우 */ 
             }
+            nav>ul>li{float: left; list-style: none; text-decoration: none;}
+            nav>h2{color: black; padding: 0px; font-size: 20px;}
+        
             .long_line{
-                border-bottom: solid 1px gray;
-                width: 70px;
-                margin: 10px 0px; /* 상하 좌우 */ 
+                border-bottom: solid 2.5px gray;
+                width: 180px;
+                margin: 10px 50px; /* 상하 좌우 */ 
             }
             .card{
-                background-color: white;
-                border-right: solid 1px gray;
-                border-bottom: solid 1px gray; 
-                width: 310px;  
+                background-color: darkgrey;
+                border-right: solid 1px black;
+                border-bottom: solid 1px black;
+                width: 310px;
+                height: 650px;  
             }
             .card dd{
                 margin: 0px; 
@@ -43,7 +64,6 @@
                 font-weight: bold;
             }
             .card .category{
-                background-color:gray;
                 color:white; 
                 /* width: 150px; */ 
                 display: block; /* 표시방식 : 블록 */ 
@@ -65,338 +85,390 @@
             .visual img{
                 display: inline-block; /* 표시: 인라인-블록 */ 
                 /* 이 경우 소문자 pjgy등을 표시할 밑공간 필요 */ 
-                display: block;          
+                display: block;
+                width: 100%;          
             }
             .info{
                 padding: 20px; 
             }
-            #content li{
+                   #content li{
                 float:left;
                 list-style:none; 
                 margin:16px; 
             }
-            
+            nav{
+                display: block;
+                background-color: black;
+            }
+            .box1{float: right; width: auto; padding: 20px 0px 0px 0px;}
+            .menu ul{margin: 0; padding: 0; list-style: none;}
+            .menu li a{display: block; padding: 10px 15px; color: white; font-size: 14px; text-decoration: none;}
+            .menu li a:hover{background-color: #ffffff;}
+            .menu ul:after{display: block; clear: both;}
+            .menu li{float: left; width: auto;
+            }
+            section{
+                text-align: center;
+            }
+            section h3{
+                color: blanchedalmond;
+                font-size: 30px;
+                font-weight: normal; 
+                margin: 50px 0px; /* 상하 좌우 */ 
+            }
+            section p{
+                margin: 80px 0px; 
+                padding: 0px 100px; 
+            }
+
+            section #about_list{
+                padding: 0px 100px; /* 상하 좌우 */ 
+            }
+            section dd{
+                margin: 0px; 
+            }
+
+            section>#about_list>li{
+                float: left;
+                width: 300px; /* 고정값 */
+                width: 25%; /* 가변값 */  
+                width: calc(25% - (1px /4 * 3) - 40px - 40px);
+                list-style: none;
+
+                border-right: solid 1px #ccc; 
+                padding: 40px; 
+            }
+            section>#about_list>li:nth-child(4){
+                border: none;
+            }
+            #work_list li{
+                float: left; 
+                list-style: none;
+                width: 25%; 
+            }
+            #work_list{
+                padding: 0px;
+            }
+            #work_list img{
+                width: 100%; 
+                display:block; 
+            }
+
+            .container:nth-child(1){background-color:#43484e;}
+            .container:nth-child(2){background-color:#43484e;}
+            .container{
+                padding: 30px;
+            }
+            .content_part{
+                float: left; /*둥둥떠다니게: 왼쪽기준으로*/ 
+                width: 480px; 
+                margin: 10px;
+                font-size: 14px;
+            }
+            .container>section{
+                /* margin-left: 180px; */ 
+                width: 1000px; 
+                margin-left: auto; /* 바깥여백-왼쪽: 자동 */
+                margin-right: auto; 
+            }
+            .container>section>h3{
+                color: white; 
+            }
+            .container dt{
+                font-weight: bold;
+                margin-top: 25px;
+                margin-right: 0px;
+                margin-bottom: 25px;
+                margin-left: 0px;
+                margin: 25px; /* 네 방향 모두 */
+                margin: 25px 0px; /* 상하 좌우 */
+                margin: 25px 0px 25px 0px; 
+                /* 상 우 하 좌 (위에서부터 시계방향) */ 
+            }
+            .container dd{
+                    margin: 25px 0px; /* 바깥여백 : 없음 */
+                }
+
+            footer li{
+                float:left;
+                list-style: none;
+                padding: 0px 10px; /* 상하 좌우 */
+            }
+            footer ul{
+                padding: 0px; 
+            }
+            footer{
+                background-color: slategrey;
+                padding: 30px;
+                
+
+            }
+            #gogo{
+                text-align: center
+            }
+            #wrap{
+                text-align: center
+            }
+        
         </style>
     </head>
     <body>
         <div id="wrap"> 
             <header>
-                <h1>Gridly</h1>
-                <div class="short_line"></div>
-                <nav>
+                <h1 class="float_left"></h1>
+                <div class="box1">
+                <nav class="menu">
                     <ul>
-                        <li>home</li>
-                        <li>digital designs</li>
-                        <li>web designs</li>
-                        <li>branding/identity</li>
-                        <li>about me</li>
-                        <li>contact</li>
-                        <div class="clear"></div>
+                        <li><a href="#section1">music</a></li>
+                        <li><a href="#section2">deep</a></li>
+                        <li><a href="#section3">still cut</a></li>
+                        <li><a href="#section4">contact</a></li>
                     </ul>
                 </nav>
-                <div class="short_line"></div>
-            </header>
-            <div id="content">
-                <ul>
-                <li class="card">
-                    <div class="visual">
-                        <img src="images/layout3_img1.jpg" />
-                        <div class="category">
-                            Photoshop design 
-                        </div>
-                    </div>
-                    <div class="info">
-                        <dl>
-                            <dt>Dulux Colour Awardes</dt>
-                            <dd>
-                                <div class="dete"> 12th October 2011</div>
-                                <div class="long_line"></div>
-                                <p>
-                                    A direct mail kit that announces the Dulux 
-                                    Colour Awards Competition has commenced. A 
-                                    collection of posters showing the famous colours 
-                                    of history, advertises you add your own colours
-                                    to history.
-                                </p>
-                                <div class="long_line"></div>
-                                <div>Read On →</div>
-                            </dd>
-                        </dl>
-                    </div>
-                </li>
-                <li class="card">
-                    <div class="visual">
-                        <img src="images/layout3_img2.jpg" />
-                        <div class="category">
-                            Photoshop design 
-                        </div>
-                    </div>
-                    <div class="info">
-                        <dl>
-                            <dt>Dulux Colour Awardes</dt>
-                            <dd>
-                                <div class="dete"> 12th October 2011</div>
-                                <div class="long_line"></div>
-                                <p>
-                                    A direct mail kit that announces the Dulux 
-                                    Colour Awards Competition has commenced. A 
-                                    collection of posters showing the famous colours 
-                                    of history, advertises you add your own colours
-                                    to history.
-                                </p>
-                                <div class="long_line"></div>
-                                <div>Read On →</div>
-                            </dd>
-                        </dl>
-                    </div>
-                </li>
-            <li class="card">
-                    <div class="visual">
-                        <img src="images/layout3_img3.jpg" />
-                        <div class="category">
-                            Photoshop design 
-                        </div>
-                    </div>
-                    <div class="info">
-                        <dl>
-                            <dt>Dulux Colour Awardes</dt>
-                            <dd>
-                                <div class="dete"> 12th October 2011</div>
-                                <div class="long_line"></div>
-                                <p>
-                                    A direct mail kit that announces the Dulux 
-                                    Colour Awards Competition has commenced. A 
-                                    collection of posters showing the famous colours 
-                                    of history, advertises you add your own colours
-                                    to history.
-                                </p>
-                                <div class="long_line"></div>
-                                <div>Read On →</div>
-                            </dd>
-                        </dl>
-                    </div>
-                </li>
-                <li class="card">
-                        <div class="visual">
-                            <img src="images/layout3_img4.jpg" />
-                            <div class="category">
-                                Photoshop design 
-                            </div>
-                        </div>
-                        <div class="info">
-                            <dl>
-                                <dt>Dulux Colour Awardes</dt>
-                                <dd>
-                                    <div class="dete"> 12th October 2011</div>
-                                    <div class="long_line"></div>
-                                    <p>
-                                        A direct mail kit that announces the Dulux 
-                                        Colour Awards Competition has commenced. A 
-                                        collection of posters showing the famous colours 
-                                        of history, advertises you add your own colours
-                                        to history.
-                                    </p>
-                                    <div class="long_line"></div>
-                                    <div>Read On →</div>
-                                </dd>
-                            </dl>
-                        </div>
-                    </li>
-                <li class="card">
-                        <div class="visual">
-                            <img src="images/layout3_img5.jpg" />
-                            <div class="category">
-                                Photoshop design 
-                            </div>
-                        </div>
-                        <div class="info">
-                            <dl>
-                                <dt>Dulux Colour Awardes</dt>
-                                <dd>
-                                    <div class="dete"> 12th October 2011</div>
-                                    <div class="long_line"></div>
-                                    <p>
-                                        A direct mail kit that announces the Dulux 
-                                        Colour Awards Competition has commenced. A 
-                                        collection of posters showing the famous colours 
-                                        of history, advertises you add your own colours
-                                        to history.
-                                    </p>
-                                    <div class="long_line"></div>
-                                    <div>Read On →</div>
-                                </dd>
-                            </dl>
-                        </div>
-                    </li>
-                <li class="card">
-                        <div class="visual">
-                            <img src="images/layout3_img6.jpg" />
-                            <div class="category">
-                                Photoshop design 
-                            </div>
-                        </div>
-                        <div class="info">
-                            <dl>
-                                <dt>Dulux Colour Awardes</dt>
-                                <dd>
-                                    <div class="dete"> 12th October 2011</div>
-                                    <div class="long_line"></div>
-                                    <p>
-                                        A direct mail kit that announces the Dulux 
-                                        Colour Awards Competition has commenced. A 
-                                        collection of posters showing the famous colours 
-                                        of history, advertises you add your own colours
-                                        to history.
-                                    </p>
-                                    <div class="long_line"></div>
-                                    <div>Read On →</div>
-                                </dd>
-                            </dl>
-                        </div>
-                    </li>
-                    <li class="card">
-                            <div class="visual">
-                                <img src="images/layout3_img7.jpg" />
-                                <div class="category">
-                                    Photoshop design 
-                                </div>
-                            </div>
-                            <div class="info">
-                                <dl>
-                                    <dt>Dulux Colour Awardes</dt>
-                                    <dd>
-                                        <div class="dete"> 12th October 2011</div>
-                                        <div class="long_line"></div>
-                                        <p>
-                                            A direct mail kit that announces the Dulux 
-                                            Colour Awards Competition has commenced. A 
-                                            collection of posters showing the famous colours 
-                                            of history, advertises you add your own colours
-                                            to history.
-                                        </p>
-                                        <div class="long_line"></div>
-                                        <div>Read On →</div>
-                                    </dd>
-                                </dl>
-                            </div>
-                        </li>
-                    <li class="card">
-                            <div class="visual">
-                                <img src="images/layout3_img8.jpg" />
-                                <div class="category">
-                                    Photoshop design 
-                                </div>
-                            </div>
-                            <div class="info">
-                                <dl>
-                                    <dt>Dulux Colour Awardes</dt>
-                                    <dd>
-                                        <div class="dete"> 12th October 2011</div>
-                                        <div class="long_line"></div>
-                                        <p>
-                                            A direct mail kit that announces the Dulux 
-                                            Colour Awards Competition has commenced. A 
-                                            collection of posters showing the famous colours 
-                                            of history, advertises you add your own colours
-                                            to history.
-                                        </p>
-                                        <div class="long_line"></div>
-                                        <div>Read On →</div>
-                                    </dd>
-                                </dl>
-                            </div>
-                        </li>
-                    <li class="card">
-                            <div class="visual">
-                                <img src="images/layout3_img9.jpg" />
-                                <div class="category">
-                                    Photoshop design 
-                                </div>
-                            </div>
-                            <div class="info">
-                                <dl>
-                                    <dt>Dulux Colour Awardes</dt>
-                                    <dd>
-                                        <div class="dete"> 12th October 2011</div>
-                                        <div class="long_line"></div>
-                                        <p>
-                                            A direct mail kit that announces the Dulux 
-                                            Colour Awards Competition has commenced. A 
-                                            collection of posters showing the famous colours 
-                                            of history, advertises you add your own colours
-                                            to history.
-                                        </p>
-                                        <div class="long_line"></div>
-                                        <div>Read On →</div>
-                                    </dd>
-                                </dl>
-                            </div>
-                        </li>
-                    <li class="card">
-                            <div class="visual">
-                                <img src="images/layout3_img10.jpg" />
-                                <div class="category">
-                                    Photoshop design 
-                                </div>
-                            </div>
-                            <div class="info">
-                                <dl>
-                                    <dt>Dulux Colour Awardes</dt>
-                                    <dd>
-                                        <div class="dete"> 12th October 2011</div>
-                                        <div class="long_line"></div>
-                                        <p>
-                                            A direct mail kit that announces the Dulux 
-                                            Colour Awards Competition has commenced. A 
-                                            collection of posters showing the famous colours 
-                                            of history, advertises you add your own colours
-                                            to history.
-                                        </p>
-                                        <div class="long_line"></div>
-                                        <div>Read On →</div>
-                                    </dd>
-                                </dl>
-                            </div>
-                        </li>
-                        <li class="card">
-                                <div class="visual">
-                                    <img src="images/layout3_img11.jpg" />
-                                    <div class="category">
-                                        Photoshop design 
-                                    </div>
-                                </div>
-                                <div class="info">
-                                    <dl>
-                                        <dt>Dulux Colour Awardes</dt>
-                                        <dd>
-                                            <div class="dete"> 12th October 2011</div>
-                                            <div class="long_line"></div>
-                                            <p>
-                                                A direct mail kit that announces the Dulux 
-                                                Colour Awards Competition has commenced. A 
-                                                collection of posters showing the famous colours 
-                                                of history, advertises you add your own colours
-                                                to history.
-                                            </p>
-                                            <div class="long_line"></div>
-                                            <div>Read On →</div>
-                                        </dd>
-                                    </dl>
-                                </div>
-                            </li>
-                    <div class="clear"></div>
-                    </ul>
                 </div>
-                <footer>
-                    <div class="short_line"></div>
-                    <img src="images/layout3_icon1.png" />
-                    <img src="images/layout3_icon2.png" />
-                    <img src="images/layout3_icon3.png" />
-                    <img src="images/layout3_icon4.png" />
-                    <div class="short_line"></div>
-                    <div>This website & the Internet Ends hereg</div>
-                    <div>Copyrignt 2011 Showcase Design www.BlazRobar.com</div>
-                </footer>
+                <div class="clear"></div>
+            </header>
+            <div class="clear"></div>
+            <div id="content">
+                <ul id="gogo">
+                <div id="section1">
+                <div>
+                <li class="card">
+                    <div class="visual">
+                        <img src="images3/rudderless.jpg" />
+                        <div class="category">
+                </div>
+                <div class="info">
+                        <dl>
+                        <dt>Rudderless</dt>
+                        <dd>
+                            <div class="dete"> 2015.07.09 개봉 </div>
+                            <div class="long_line"></div>
+
+                            <b>“계속 나아가. 그게 바로 정답이야”</b>
+
+                            <div class="long_line"></div>
+                            <a href="https://movie.naver.com/movie/bi/mi/basic.nhn?code=109626" >바로가기 →</a>
+                        </dd>
+                        </dl>
+                </div>
+                </li>
+                <li class="card">
+                        <div class="visual">
+                        <img src="images3/insidellewyn.jpg" />
+                        <div class="category">            
+                </div>
+                    <div class="info">
+                        <dl>
+                        <dt>Insidellewyn</dt>
+                        <dd>
+                            <div class="dete"> 2014.01.29 개봉 </div>
+                            <div class="long_line"></div>
+                                        <b>결코 나이들지 않는게 있다면
+                                            그건 포크송일 것이다</b>
+                            <div class="long_line"></div>
+                            <a href="https://movie.naver.com/movie/bi/mi/basic.nhn?code=89627" >바로가기 →</a>
+                        </dd>
+                        </dl>
+                </div>
+                </li>
+                <li class="card">
+                        <div class="visual">
+                        <img src="images3/once.jpg" />
+                        <div class="category">            
+                </div>
+                    <div class="info">
+                        <dl>
+                        <dt>Once</dt>
+                        <dd>
+                            <div class="dete"> 2007.09.20 개봉 </div>
+                            <div class="long_line"></div>
+                                        <b>난 당신을 모르지만,
+                                        그래서 더욱 당신을 원해요</b>
+                            <div class="long_line"></div>
+                            <a href="https://movie.naver.com/movie/bi/mi/basic.nhn?code=65998" >바로가기 →</a>
+                        </dd>
+                        </dl>
+                </div>
+                </li>
+                <li class="card">
+                        <div class="visual">
+                            <img src="images3/borntobeblue.jpeg" />
+                            <div class="category">
+                            </div>
+                </div>
+                    <div class="info">
+                        <dl>
+                        <dt>Born to be Blue</dt>
+                        <dd>
+                            <div class="dete"> 2016.06.09 개봉 </div>
+                            <div class="long_line"></div>
+                                        <b>난 음악을 연주하고 싶어요,
+                                            내가 원하는 방식으로</b>
+                            <div class="long_line"></div>
+                            <a href="https://movie.naver.com/movie/bi/mi/basic.nhn?code=126078" >바로가기 →</a>
+                        </dd>
+                        </dl>
+                </div>
+                </li>
+                <li class="card">
+                        <div class="visual">
+                            <div id="section2"></div>
+                            <img src="images3/moonlight.jpeg" />
+                            <div class="category">   
+                        </div>
+                        <div class="info">
+                            <dl>
+                            <dt>Moonlight</dt>
+                            <dd>
+                                <div class="dete"> 2017.02.22 개봉 </div>
+                                <div class="long_line"></div>
+                                <b>달빛 속에선 흑인 아이들도 파랗게 보이지</b>
+                                <div class="long_line"></div>
+                                <a href="https://movie.naver.com/movie/bi/mi/basic.nhn?code=152684" >바로가기 →</a>
+                            </dd>
+                            </dl>
+                </div>
+                </li>
+                <li class="card">
+                        <div class="visual">
+                            <img src="images3/jane.jpg" />
+                            <div class="category">
+                        </div>
+                        <div class="info">
+                            <dl>
+                            <dt>꿈의 제인</dt>
+                                <dd>
+                                    <div class="dete"> 2017.05.31 개봉 </div>
+                                    <div class="long_line"></div>
+                                    <b>우리 죽지 말고 불행하게 오래오래 살아요</b>
+                                    <div class="long_line"></div>
+                                    <a href="https://movie.naver.com/movie/bi/mi/basic.nhn?code=154980" >바로가기 →</a>
+                                </dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="card">
+                            <div class="visual">
+                                <img src="images3/bleak night.jpg" />
+                                <div class="category"> 
+                                </div>
+                        <div class="info">
+                            <dl>
+                                <dt>파수꾼</dt>
+                                <dd>
+                                    <div class="dete"> 2011.03.03 개봉 </div>
+                                    <div class="long_line"></div>
+                                    <b>다시 사람들 사이에서 비참해져도 너만 알아주면 돼</b>
+                                    <div class="long_line"></div>
+                                    <a href="https://movie.naver.com/movie/bi/mi/basic.nhn?code=75378" >바로가기 →</a>
+                                </dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="card">
+                            <div class="visual">
+                                <img src="images3/florida project.jpg" />
+                                <div class="category">
+                                </div>
+                        <div class="info">
+                            <dl>
+                                <dt>The Florida Project</dt>
+                                <dd>
+                                    <div class="dete"> 2018.03.07 개봉 </div>
+                                    <div class="long_line"></div>
+                                    <b>무지개 끝엔 황금이 있대!</b>
+                                    <div class="long_line"></div>
+                                    <a href="https://movie.naver.com/movie/bi/mi/basic.nhn?code=164719" >바로가기 →</a>
+                                 </dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <div class="clear"></div>
+                </ul>
+                </div>
+                <div id="section3">
             </div>
+            <section>
+                    <h3>STILL CUT</h3>
+                    <ul id="work_list"> 
+                    <li><img src="images3/movie_image1.jpg" 
+                        onmouseover="this.src='images3/movie_image1-1.jpg'" 
+                        onmouseout="this.src='images3/movie_image1.jpg'"></li>
+                    <li><img src="images3/movie_image2.jpg" 
+                        onmouseover="this.src='images3/movie_image2-1.jpg'" 
+                        onmouseout="this.src='images3/movie_image2.jpg'"></li>
+                    <li><img src="images3/movie_image3.jpg" 
+                        onmouseover="this.src='images3/movie_image3-1.jpg'" 
+                        onmouseout="this.src='images3/movie_image3.jpg'"></li>
+                    <li><img src="images3/movie_image4.jpg" 
+                        onmouseover="this.src='images3/movie_image4-1.jpg'" 
+                        onmouseout="this.src='images3/movie_image4.jpg'"></li>
+                        <li><img src="images3/moonlight2.gif" width="2px" height="281px" /></li>
+                        <li><img src="images3/jane2.gif" width="2px" height="281px" /></li>
+                        <li><img src="images3/bleak night2.gif" width="2px" height="281px" /></li>
+                        <li><img src="images3/florida project2.gif" width="2px" height="281px" /></li>
+                        <div class="clear"></div>
+                </ul>
+            </section>
+                    <div class="container">
+                        <section>
+                            <h3>BEST MOVIE</h3> 
+                            <div class="content_part">
+                                <img src="images3/movie_image6-1.jpg" />
+                               <dl>
+                                   <h1>꿈의 제인(Jane)</h1> 
+                                   <b>“불행한 인생 혼자 살아 뭐하니, 그래서 다 같이 사는 거야.”</b>
+                                   <dd>
+                                        혼자 남겨지는 것이 두려운 소녀 소현은
+                                        어떻게든 사람들과 어울리기 위해 매일 안간힘을 쓴다.
+                                        하지만 그런 소현을 받아주는 것은 정호 오빠뿐이다.
+                                        정호마저 소현을 떠나고 누구라도 자신을 찾아주길 바라던 어느 날,
+                                        꿈결처럼 미스터리한 여인 제인이 나타나고,
+                                        그날 이후 소현은 조금씩 제인과의 시시한 행복을 꿈꾸기 시작한다.
+                                   </dd>
+                               </dl>    
+                           </div>
+                           <div class="content_part">
+                                <img src="images3/movie_image7-2.jpg" />
+                              <dl>
+                                <h1>파수꾼(Bleak Night)</h1>
+                                <b>“잘못된 건 없어, 처음부터 너만 없었으면 돼.”</b>
+                                <dd>
+                                    한 소년이 죽었다. 평소 아들에게 무심했던 소년의 아버지는 아들의 
+                                    갑작스런 공백에 매우 혼란스러워하며 뒤늦은 죄책감과 무력함에, 
+                                    아들 기태의 죽음을 뒤쫓기 시작한다. 
+                                    천진하고 순수했던 그 시절, 미성숙한 소통의 오해가 불러 일으킨 비극적 파국. 
+                                    독단적 우정이 가져온 폭력과 그 상처의 전염은 우리를 아프고 충격적인 결말로 이끌어간다. 
+                                    서로가 전부였던 이 세 친구들 사이에서 과연 무슨 일이 벌어진 걸까?
+                                </dd>
+                            </dl>    
+                       </div>
+                       <div class="clear"></div>
+                </section>
+            </div> 
+            <div class="container">
+            <div id="gogo">
+            <section>
+                    <h1>파수꾼(Bleak Night) 예고편</h1>
+                <video controls>
+                    <source src="media/pskk.mp4" type="video/mp4"width="100px"/>
+                </video>
+                </section>
+            </div>
+            <br />
+            <br />
+            <br />
+            <footer>
+                    <div id="section4"></div>
+                    <img src="images3/facebook.png" />
+                    <img src="images3/twitter.png" />
+                    <img src="images3/email.png" />
+                    <div>This website & the Internet Ends hereg</div>
+                    <div>Copyrignt 2019 seoyoung Design www.young2.com</div>
+                </footer>
+                <a href="index.html" target="_blank">돌아오기</a>
         </body>
         </html>
+
+        
